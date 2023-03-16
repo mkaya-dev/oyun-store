@@ -49,7 +49,7 @@ const Deal = () => {
                 <div className="sol">
                     {
                         firsatListe.map(fl =>
-                            <div className="ortala container text-start">
+                            <div className="alt-cizgi ortala container text-start">
                                 <Link to={`/${storeId}/${storeName}/${fl.gameID}/GameList`} style={{textDecoration:"none" , color:"black"}}>
                                 {fl.title}
 

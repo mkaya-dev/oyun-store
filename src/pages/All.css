@@ -45,6 +45,13 @@
     padding: 0px 30px 0px 10px;
     text-align: center;
     border-left: 2px solid black;
+
+    
+
+}
+
+.alt-cizgi{
+    border-bottom: 1px dotted #ccc;
 }
 
 .sag {
