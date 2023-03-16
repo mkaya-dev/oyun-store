@@ -9,6 +9,7 @@ import resim4 from "../Resimler/slayt5.png"
 import resim5 from "../Resimler/slayt.jpg"
 import resim6 from "../Resimler/slayt6.jpg"
 import resim7 from "../Resimler/slayt7.jpg"
+import Buttonlar from "../Component/Buttonlar";
 
 
 
@@ -59,6 +60,7 @@ const Deal = () => {
                     <div className="text-start">
             <Link to={"/"}><button className="btn btn-outline-dark">Geri</button></Link>
             </div>
+           
             
             </div>
             
@@ -78,11 +80,18 @@ const Deal = () => {
             <img className="renk" src={resim5} width="300px"/><br/>
             <img className="renk" src={resim6} width="300px"/><br/>
             <img className="renk" src={resim7} width="300px"/><br/>
+            <div><br/><br/>
+            <Buttonlar />
+                
+            </div>
+            
 
 
             
 
             </div>
+            
+           
         </div>
         </div>
     )
