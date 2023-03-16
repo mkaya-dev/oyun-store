@@ -1,6 +1,5 @@
 import React from "react";
 import "../pages/All.css"
-
 const Buttonlar = () => {
     return (
         <div>
