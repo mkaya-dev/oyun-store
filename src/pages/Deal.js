@@ -34,6 +34,7 @@ const Deal = () => {
             .then(fl => {
                 setFirsatListe(fl)
                 setLoading(false)
+                
             }).catch(e => {
                 alert("Api'den veriler çekilirken bir hata oluştu");
                 setLoading(false);

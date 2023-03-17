@@ -47,14 +47,14 @@ const GameList = () => {
             <img src={game.info.thumb} /><br /><br />
             <h4>En ucuz Fiyat:${game.cheapestPriceEver.price}</h4>
 
-            <h4>Bugune Kadarki En Büyük Fırsatlar</h4>
+            <h4>Bugüne Kadarki En Büyük Fırsatlar</h4>
             <div className="sol">
                 {
                     game.deals.map(d =>
                         <div className="">
                             <div class="card-group">
                                 <div class="card ">
-                                    <div class="card-body">
+                                    <div class="card-body renk">
                                         <h5 class="card-title">Satış Fiyatı: ${d.price}</h5>
                                         <p class="card-text">İndirimsiz Fiyatı: ${d.retailPrice}</p>
                                         <p class="card-text">İndirim Oranı:% {d.savings}</p>
