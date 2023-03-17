@@ -40,6 +40,14 @@
     
 }
 
+.card-group{
+    display:block;
+    float: left;
+    margin:auto 0px;
+    
+    
+}
+
 .sol {
     float: left;
     padding: 0px 30px 0px 10px;
@@ -49,6 +57,8 @@
     
 
 }
+
+
 
 .alt-cizgi{
     border-bottom: 1px dotted #ccc;

@@ -9,6 +9,12 @@ import resim4 from "../Resimler/slayt5.png"
 import resim5 from "../Resimler/slayt.jpg"
 import resim6 from "../Resimler/slayt6.jpg"
 import resim7 from "../Resimler/slayt7.jpg"
+import resim8 from "../Resimler/resim1.jpg"
+import resim9 from "../Resimler/resim2.jpg"
+import resim10 from "../Resimler/resim3.jpg"
+import resim11 from "../Resimler/resim4.jpg"
+import resim12 from "../Resimler/resim5.jpg"
+import resim13 from "../Resimler/resim6.jpg"
 import Buttonlar from "../Component/Buttonlar";
 
 
@@ -80,7 +86,15 @@ const Deal = () => {
             <img className="renk" src={resim5} width="300px"/><br/>
             <img className="renk" src={resim6} width="300px"/><br/>
             <img className="renk" src={resim7} width="300px"/><br/>
-            <div><br/><br/>
+            <img className="renk" src={resim8} width="300px" /><br />
+                <img className="renk" src={resim9} width="300px" /><br />
+                <img className="renk" src={resim10} width="300px" /><br />
+                <img className="renk" src={resim11} width="300px" /><br />
+                <img className="renk" src={resim12} width="300px" /><br />
+                <img className="renk" src={resim13} width="300px" /><br />
+            <div>
+                
+                <br/><br/>
             <Buttonlar />
                 
             </div>

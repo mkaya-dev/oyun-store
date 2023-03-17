@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import resim1 from "../Resimler/slayt1.jpg"
+import resim2 from "../Resimler/slayt2.jpg"
+import resim3 from "../Resimler/slayt3.jpg"
+import resim4 from "../Resimler/slayt5.png"
+import resim5 from "../Resimler/slayt.jpg"
+import resim6 from "../Resimler/slayt6.jpg"
+import resim7 from "../Resimler/slayt7.jpg"
+import resim8 from "../Resimler/resim1.jpg"
+import resim9 from "../Resimler/resim2.jpg"
+import resim10 from "../Resimler/resim3.jpg"
+import resim11 from "../Resimler/resim4.jpg"
+import resim12 from "../Resimler/resim5.jpg"
+import resim13 from "../Resimler/resim6.jpg"
+
 import "./All.css"
 
 
@@ -32,21 +46,50 @@ const GameList = () => {
             <h5>{game.info.title}</h5>
             <img src={game.info.thumb} /><br /><br />
             <h4>En ucuz Fiyat:${game.cheapestPriceEver.price}</h4>
-            <Link to={`/${storeId}/${storeName}/Deal`}><button className="btn btn-outline-dark">Geri</button></Link>
+
             <h4>Bugune Kadarki En Büyük Fırsatlar</h4>
-            {
-                game.deals.map(d =>
-                    <div>
-                        Satış Fiyatı: {d.price} <br />
-                        İndirimsiz Fiyatı:{d.retailPrice}
-                        <p> İndirim Oranı:%
-                            {d.savings}
-                        </p>
-                    </div>
-                )
-            }
+            <div className="sol">
+                {
+                    game.deals.map(d =>
+                        <div className="">
+                            <div class="card-group">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Satış Fiyatı: ${d.price}</h5>
+                                        <p class="card-text">İndirimsiz Fiyatı: ${d.retailPrice}</p>
+                                        <p class="card-text">İndirim Oranı:% {d.savings}</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
+                <Link to={`/${storeId}/${storeName}/Deal`}>
+                    <button className="btn btn-outline-dark">Geri</button>
+                </Link>
+
+            </div>
+            <div className="sag">
+                <img className="renk" src={resim1} width="300px" /><br />
+                <img className="renk" src={resim2} width="300px" /><br />
+                <img className="renk" src={resim3} width="300px" /><br />
+                <img className="renk" src={resim4} width="300px" /><br />
+                <img className="renk" src={resim5} width="300px" /><br />
+                <img className="renk" src={resim6} width="300px" /><br />
+                <img className="renk" src={resim7} width="300px" /><br />
+                <img className="renk" src={resim8} width="300px" /><br />
+                <img className="renk" src={resim9} width="300px" /><br />
+                <img className="renk" src={resim10} width="300px" /><br />
+                <img className="renk" src={resim11} width="300px" /><br />
+                <img className="renk" src={resim12} width="300px" /><br />
+                <img className="renk" src={resim13} width="300px" /><br />
+
+            </div>
         </div>
     )
 }
 
 export default GameList;
+
