@@ -22,33 +22,50 @@ const GameList = () => {
 
     let { storeId, storeName, gameId } = useParams();
     const [game, setGame] = useState(null)
+    const [loading, setLoading] = useState(false);
+
 
     useEffect(() => {
         const api_link = `https://www.cheapshark.com/api/1.0/games?id=${gameId}`
+        setLoading(true)
         fetch(api_link)
             .then(g => g.json())
             .then(g => {
                 setGame(g)
+                setLoading(false)
+
             })
     }, [gameId])
 
     if (game === null)
         return (
             <div>
-                <ClimbingBoxLoader className="orta">
+             <ClimbingBoxLoader className="orta">
 
-                </ClimbingBoxLoader>
+                
+             </ClimbingBoxLoader>
+             
+
             </div>
+                
         )
 
     return (
+        
         <div className="container text-center">
-            <h5>{game.info.title}</h5>
+            
+           
+            
+            <h5 style={{ color: "white" }}>{game.info.title}</h5>
             <img src={game.info.thumb} /><br /><br />
-            <h4>En ucuz Fiyat:${game.cheapestPriceEver.price}</h4>
+            <h4 style={{ color: "white" }}>En ucuz Fiyat:${game.cheapestPriceEver.price}</h4>
 
-            <h4>Bugüne Kadarki En Büyük Fırsatlar</h4>
+            <h4 style={{ color: "white" }}>Bugüne Kadarki En Büyük Fırsatlar</h4>
+
             <div className="sol">
+
+           
+            
                 {
                     game.deals.map(d =>
                         <div className="">
@@ -65,12 +82,19 @@ const GameList = () => {
                             </div>
                         </div>
                     )
+
                 }
+
+            
+            
+            
                 <Link to={`/${storeId}/${storeName}/Deal`}>
-                    <button className="btn btn-outline-dark">Geri</button>
+                    <button className="btn btn-outline-light">Geri</button>
                 </Link>
+            
 
             </div>
+
             <div className="sag">
                 <img className="renk" src={resim1} width="300px" /><br />
                 <img className="renk" src={resim2} width="300px" /><br />

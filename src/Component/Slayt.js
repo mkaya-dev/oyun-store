@@ -17,8 +17,8 @@ const Slayt =() =>{
 
 
     const slides =[
-        {url:resim3},
         {url:resim6},
+        {url:resim3},
         {url:resim2},
         {url:resim4},
         {url:resim5},

@@ -5,23 +5,22 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Slayt from "../Component/Slayt";
 
 
-
-
 const Home = () => {
     const [magzaListe, setMagzaListe] = useState([])
     const [loading, setLoading] = useState(false);
 
 
-
     const film_img = "https://www.cheapshark.com"
+
+  
 
     useEffect(() => {
         const api_link = "https://www.cheapshark.com/api/1.0/stores"
         setLoading(true)
         fetch(api_link)
-            .then(fl => fl.json())
-            .then(fl => {
-                setMagzaListe(fl)
+            .then(ml => ml.json())
+            .then(ml => {
+                setMagzaListe(ml)
                 setLoading(false)
 
             })
@@ -33,7 +32,7 @@ const Home = () => {
             <Slayt/>
             {loading ?
                 <ClimbingBoxLoader className="orta"
-                    color={"black"}
+                    color={"white"}
                     loading={loading}
                     size={10}
                 />
@@ -42,12 +41,13 @@ const Home = () => {
                 <div className="col-12 row row-cols-2 row-cols-md-6 g-2">
                     
                     {
-                        magzaListe.map(fl =>
+                        magzaListe.map(ml =>
                             <div className="renk">
 
-                                <Link to={`/${fl.storeID}/${fl.storeName}/Deal`}>
-                                    <img className="renk" src={film_img + fl.images.logo} width="180px" />
+                                <Link to={`/${ml.storeID}/${ml.storeName}/Deal`}>
+                                    <img className="renk" src={film_img + ml.images.logo} width="180px" />
                                 </Link>
+                               
 
                                 <div>
 

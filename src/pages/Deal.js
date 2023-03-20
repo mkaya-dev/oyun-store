@@ -44,11 +44,11 @@ const Deal = () => {
     return (
         <div>
         <div className="container text-center">
-                    <h1>{storeName} Fırsatları</h1>
+                    <h1 style={{color:"white"}}>{storeName} Fırsatları</h1>
 
             {loading ?
                 <ClimbingBoxLoader className="orta"
-                    color={"black"}
+                    color={"white"}
                     loading={loading}
                     size={10}
                 />
@@ -57,7 +57,7 @@ const Deal = () => {
                     {
                         firsatListe.map(fl =>
                             <div className="alt-cizgi ortala container text-start">
-                                <Link to={`/${storeId}/${storeName}/${fl.gameID}/GameList`} style={{textDecoration:"none" , color:"black"}}>
+                                <Link to={`/${storeId}/${storeName}/${fl.gameID}/GameList`} style={{textDecoration:"none" , color:"white"}}>
                                 {fl.title}
 
                                 </Link>
@@ -65,7 +65,7 @@ const Deal = () => {
                         )
                     }
                     <div className="text-start">
-            <Link to={"/"}><button className="btn btn-outline-dark">Geri</button></Link>
+            <Link to={"/"}><button className="btn btn-outline-light">Geri</button></Link>
             </div>
            
             
