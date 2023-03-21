@@ -22,17 +22,14 @@ const GameList = () => {
 
     let { storeId, storeName, gameId } = useParams();
     const [game, setGame] = useState(null)
-    const [loading, setLoading] = useState(false);
 
 
     useEffect(() => {
         const api_link = `https://www.cheapshark.com/api/1.0/games?id=${gameId}`
-        setLoading(true)
         fetch(api_link)
             .then(g => g.json())
             .then(g => {
                 setGame(g)
-                setLoading(false)
 
             })
     }, [gameId])
@@ -96,6 +93,11 @@ const GameList = () => {
             </div>
 
             <div className="sag">
+            <h4 className="a">
+                <Link to={"/"}>
+                <i class="fa-solid fa-house" style={{color:"white"}} ></i>
+                </Link>
+                </h4>
                 <img className="renk" src={resim1} width="300px" /><br />
                 <img className="renk" src={resim2} width="300px" /><br />
                 <img className="renk" src={resim3} width="300px" /><br />

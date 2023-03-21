@@ -43,6 +43,7 @@ const Deal = () => {
 
     return (
         <div>
+            
         <div className="container text-center">
                     <h1 style={{color:"white"}}>{storeName} Fırsatları</h1>
 
@@ -80,6 +81,11 @@ const Deal = () => {
                
             }
             <div className=" sag">
+                <h4 className="a">
+                <Link to={"/"}>
+                <i class="fa-solid fa-house" style={{color:"white"}} ></i>
+                </Link>
+                </h4>
             <img className="renk" src={resim1} width="300px"/><br/>
             <img className="renk" src={resim2} width="300px"/><br/>
             <img className="renk" src={resim3} width="300px"/><br/>

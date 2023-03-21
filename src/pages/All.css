@@ -58,6 +58,14 @@
 
 }
 
+.a:hover{
+    transform: scale(1.2);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 50px;
+
+
+}
 
 
 .alt-cizgi{
