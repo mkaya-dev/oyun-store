@@ -64,8 +64,8 @@ const ImageSlider = ({ slides }) => {
 
     return (
         <div style={SliderStyles}>
-            <div style={leftArrowStyles} onClick={goToPrevious}><i class="fa-solid fa-left-long"></i></div>
-            <div style={rightArrowStyles} onClick={goToNext}><i class="fa-solid fa-right-long"></i></div>
+            <div style={leftArrowStyles} onClick={goToPrevious}><i class="fa-solid fa-caret-left"></i></div>
+            <div style={rightArrowStyles} onClick={goToNext}><i class="fa-solid fa-caret-right"></i></div>
 
             <div style={SlideStyles}></div>
             <div style={dotsContainerStyles}></div>
