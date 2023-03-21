@@ -34,7 +34,7 @@ const Deal = () => {
             .then(fl => {
                 setFirsatListe(fl)
                 setLoading(false)
-                
+
             }).catch(e => {
                 alert("Api'den veriler çekilirken bir hata oluştu");
                 setLoading(false);
@@ -43,77 +43,79 @@ const Deal = () => {
 
     return (
         <div>
-            
-        <div className="container text-center">
-                    <h1 style={{color:"white"}}>{storeName} Fırsatları</h1>
 
-            {loading ?
-                <ClimbingBoxLoader className="orta"
-                    color={"white"}
-                    loading={loading}
-                    size={10}
-                />
-                :
-                <div className="sol">
-                    {
-                        firsatListe.map(fl =>
-                            <div className="alt-cizgi ortala container text-start">
-                                <Link to={`/${storeId}/${storeName}/${fl.gameID}/GameList`} style={{textDecoration:"none" , color:"white"}}>
-                                {fl.title}
+            <div className="container text-center">
+                <h1 style={{ color: "white" }}>{storeName} Fırsatları</h1>
 
-                                </Link>
-                            </div>
-                        )
-                    }
-                    <div className="text-start">
-            <Link to={"/"}><button className="btn btn-outline-light">Geri</button></Link>
+                {loading ?
+                    <ClimbingBoxLoader className="orta"
+                        color={"white"}
+                        loading={loading}
+                        size={10}
+                    />
+                    :
+                    <div className="sol">
+                        {
+                            firsatListe.map(fl =>
+                                <div className="liste alt-cizgi ortala container text-start">
+                                    <Link to={`/${storeId}/${storeName}/${fl.gameID}/GameList`} style={{ textDecoration: "none", color: "white" }}>
+                                        {fl.title}
+
+                                    </Link>
+                                </div>
+                            )
+                        }
+                        <div className="text-start">
+                            <Link to={"/"}><button className="btn btn-outline-light">
+                                <i class="fa-solid fa-caret-left"></i>
+                            </button></Link>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                }
+                <div className=" sag">
+                    <h4 className="a">
+                        <Link to={"/"}>
+                            <i class="fa-solid fa-house" style={{ color: "white" }} ></i>
+                        </Link>
+                    </h4>
+                    <img className="renk" src={resim1} width="300px" /><br />
+                    <img className="renk" src={resim2} width="300px" /><br />
+                    <img className="renk" src={resim3} width="300px" /><br />
+                    <img className="renk" src={resim4} width="300px" /><br />
+                    <img className="renk" src={resim5} width="300px" /><br />
+                    <img className="renk" src={resim6} width="300px" /><br />
+                    <img className="renk" src={resim7} width="300px" /><br />
+                    <img className="renk" src={resim8} width="300px" /><br />
+                    <img className="renk" src={resim9} width="300px" /><br />
+                    <img className="renk" src={resim10} width="300px" /><br />
+                    <img className="renk" src={resim11} width="300px" /><br />
+                    <img className="renk" src={resim12} width="300px" /><br />
+                    <img className="renk" src={resim13} width="300px" /><br />
+                    <div>
+
+                        <br /><br />
+                        <Buttonlar />
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
             </div>
-           
-            
-            </div>
-            
-               
-               
-            
-                    
-               
-               
-               
-            }
-            <div className=" sag">
-                <h4 className="a">
-                <Link to={"/"}>
-                <i class="fa-solid fa-house" style={{color:"white"}} ></i>
-                </Link>
-                </h4>
-            <img className="renk" src={resim1} width="300px"/><br/>
-            <img className="renk" src={resim2} width="300px"/><br/>
-            <img className="renk" src={resim3} width="300px"/><br/>
-            <img className="renk" src={resim4} width="300px"/><br/>
-            <img className="renk" src={resim5} width="300px"/><br/>
-            <img className="renk" src={resim6} width="300px"/><br/>
-            <img className="renk" src={resim7} width="300px"/><br/>
-            <img className="renk" src={resim8} width="300px" /><br />
-                <img className="renk" src={resim9} width="300px" /><br />
-                <img className="renk" src={resim10} width="300px" /><br />
-                <img className="renk" src={resim11} width="300px" /><br />
-                <img className="renk" src={resim12} width="300px" /><br />
-                <img className="renk" src={resim13} width="300px" /><br />
-            <div>
-                
-                <br/><br/>
-            <Buttonlar />
-                
-            </div>
-            
-
-
-            
-
-            </div>
-            
-           
-        </div>
         </div>
     )
 

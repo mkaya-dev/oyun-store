@@ -37,22 +37,22 @@ const GameList = () => {
     if (game === null)
         return (
             <div>
-             <ClimbingBoxLoader className="orta">
+                <ClimbingBoxLoader className="orta">
 
-                
-             </ClimbingBoxLoader>
-             
+
+                </ClimbingBoxLoader>
+
 
             </div>
-                
+
         )
 
     return (
-        
+
         <div className="container text-center">
-            
-           
-            
+
+
+
             <h5 style={{ color: "white" }}>{game.info.title}</h5>
             <img src={game.info.thumb} /><br /><br />
             <h4 style={{ color: "white" }}>En ucuz Fiyat:${game.cheapestPriceEver.price}</h4>
@@ -61,8 +61,11 @@ const GameList = () => {
 
             <div className="sol">
 
-           
-            
+
+
+
+
+
                 {
                     game.deals.map(d =>
                         <div className="">
@@ -82,21 +85,26 @@ const GameList = () => {
 
                 }
 
-            
-            
-            
-                <Link to={`/${storeId}/${storeName}/Deal`}>
-                    <button className="btn btn-outline-light">Geri</button>
-                </Link>
-            
+
+
+
+
+
+
+                <div className="text-start">
+                    <Link to={`/${storeId}/${storeName}/Deal`}><button className="btn btn-outline-light">
+                    <i class="fa-solid fa-caret-left"></i>
+                        </button></Link>
+                </div>
+
 
             </div>
 
             <div className="sag">
-            <h4 className="a">
-                <Link to={"/"}>
-                <i class="fa-solid fa-house" style={{color:"white"}} ></i>
-                </Link>
+                <h4 className="a">
+                    <Link to={"/"}>
+                        <i class="fa-solid fa-house" style={{ color: "white" }} ></i>
+                    </Link>
                 </h4>
                 <img className="renk" src={resim1} width="300px" /><br />
                 <img className="renk" src={resim2} width="300px" /><br />
