@@ -8,6 +8,29 @@
     margin-top: 50px;
 }
 
+.containerr{
+    width: 100%;
+    padding: 2px;
+    background:#16326a;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 250px;
+    height: 500px;
+    background: black;
+    margin: 0px 10px;
+    transition: 1s;
+}
+
+.box:hover{
+    transform: scale(1.3);
+    background: greenyellow;
+    box-shadow: 2px 2px 2px #000000;
+}
+
 
 
 .renk {
@@ -106,7 +129,7 @@
 }
 
 .Wrapper .button:hover{
-    width: 200px;
+    width: 50px;
 }
 
 .Wrapper .button .icon{
@@ -150,7 +173,7 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 60px;
-    margin-left: 10px;
+    margin-left: 0px;
     transition: all 0.3s ease-out;
 
 
