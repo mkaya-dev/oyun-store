@@ -44,7 +44,7 @@ const Deal = () => {
     return (
         <div>
 
-            <div className="container text-center">
+            <div className="containerr container text-center">
                 <h1 style={{ color: "white" }}>{storeName} Fırsatları</h1>
 
                 {loading ?

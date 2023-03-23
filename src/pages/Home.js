@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./All.css"
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Slayt from "../Component/Slayt";
+import Kutu from "../Component/Kutu";
 
 
 const Home = () => {
@@ -57,6 +58,7 @@ const Home = () => {
 
                         )
                     }
+                    <Kutu/>
 
                 </div>
 
