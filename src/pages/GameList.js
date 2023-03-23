@@ -59,7 +59,7 @@ const GameList = () => {
 
             <h4 style={{ color: "white" }}>Bugüne Kadarki En Büyük Fırsatlar</h4>
 
-            <div className="sol">
+            <div className="sol col-8 row row-cols-2 row-cols-md-6 g-2 ">
 
 
 
